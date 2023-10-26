@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .container{
+      width: 500px;
+      height: 500px;
+      background-color: red;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .box1{
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+        /*设置了flex，宽度或者长度就不生效了*/
+        flex: 2;
+    }
+    .box2{
+      width: 100px;
+      height: 100px;
+      background-color: rebeccapurple;
+        flex: 2;
+    }
+    .box3{
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+        flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </div>
+</body>
+</html>

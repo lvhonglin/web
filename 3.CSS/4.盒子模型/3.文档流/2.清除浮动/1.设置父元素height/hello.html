@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .container{
+      width: 500px;
+      /*设置父元素的高度，来解决塌陷*/
+      height: 100px;
+    }
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      margin: 5px;
+      float: left;
+    }
+    .text{
+      width: 100px;
+      height: 100px;
+      background-color: rebeccapurple;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+</div>
+
+<div class="text"></div>
+</body>
+</html>
