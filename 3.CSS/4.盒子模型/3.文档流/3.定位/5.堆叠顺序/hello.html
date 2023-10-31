@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .div1 {
+        height: 200px;
+        width: 200px;
+        /*这种方式脱离的文档流*/
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        background-color: blue;
+        z-index: 2;
+    }
+    .div2 {
+        height: 200px;
+        width: 200px;
+        /*这种方式脱离的文档流*/
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        background-color: red;
+        z-index: 1;
+    }
+  </style>
+</head>
+<body>
+<div class="div1"></div>
+<div class="div2"></div>
+
+</body>
+</html>

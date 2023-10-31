@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //case中需要加break，否则从满足条件的case之后都会执行，
+  //比如如下不加break就会输出三句话
+  var num=1
+  switch (num){
+    case 1:
+      console.log("今天星期一")
+    case 2:
+      console.log("今天星期2")
+    default:
+      console.log("今天不是星期一或者星期2")
+  }
+</script>
+</body>
+</html>

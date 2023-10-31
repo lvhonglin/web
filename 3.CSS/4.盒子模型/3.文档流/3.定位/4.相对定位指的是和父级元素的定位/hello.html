@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .container {
+        height: 200px;
+        width: 200px;
+        /*这种方式脱离的文档流*/
+        position: relative;
+        left: 100px;
+        top: 100px;
+        background-color: blue;
+    }
+    .div{
+        height: 50px;
+        width: 50px;
+        /*这种方式脱离的文档流*/
+        position: relative;
+        left: 50px;
+        top: 10px;
+        background-color: red;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+    <div class="div"></div>
+</div>
+
+</body>
+</html>
