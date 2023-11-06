@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <button id="botton1">按钮</button>
+<script>
+    var elementById = document.getElementById("botton1");
+    //缺点是无法触发多个click事件，如果设置两次elementById.onclick，第一个会被覆盖
+    elementById.onclick=clickHandle
+  function clickHandle(){
+    console.log("点击了按钮")
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    /*.nav{*/
+    /*  font-size: 30px;*/
+    /*}*/
+  </style>
+</head>
+<body>
+<div class="nav">nav1</div>
+<div class="nav">nav2</div>
+<h6 class="nav">nav3</h6>
+<h6 class="nav" id="haa">nav4</h6>
+<script>
+  //1.querySelector中填css选择器
+  var element = document.querySelector(".nav");
+  console.log(element.innerHTML)
+  var element = document.querySelector("h6");
+  console.log(element.innerHTML)
+  var element = document.querySelector("#haa");
+  console.log(element.innerHTML)
+  var elements = document.querySelectorAll("#haa,.nav");
+  console.log(elements)
+</script>
+</body>
+</html>

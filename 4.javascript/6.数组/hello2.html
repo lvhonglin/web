@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  //1.join方法
+  var arr1=["1",2,3,4]
+  var s = arr1.join(",");
+  console.log(s)
+  console.log("+++++++concat+++++++")
+  //2.concat方法，把两个数组拼接返回一个新数组
+  //原数组不变
+  var arr2=[1,2]
+  var arr3=[3,4]
+  var arr4 = arr2.concat(arr3);
+  console.log(arr2)
+  console.log(arr3)
+  console.log(arr4)
+  console.log("+++++++indexOf+++++++")
+  //3.indexOf，存在则返回下标，不存在返回-1
+  //第一个参数是查找的数据，第二个参数是从xx索引开始找
+  var arr5=[1,2,3,4,3,6]
+  number1 = arr5.indexOf(3);
+  number2 = arr5.indexOf(3,4);
+  number3 = arr5.indexOf(3,5);
+  console.log(number1)
+  console.log(number2)
+  console.log(number3)
+</script>
+</body>
+</html>

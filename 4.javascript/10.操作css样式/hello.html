@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box1" class="box1"></div>
+<div id="box2" class="box2"></div>
+<div id="box3" class="box3"></div>
+<script>
+  var box1 = document.getElementById("box1");
+  var box2 = document.getElementById("box2");
+  var box3 = document.getElementById("box3");
+  //1.修改网页元素的属性
+  box1.setAttribute("style","width:200px;height:200px;background:red;")
+  //2.找到style属性进行设置
+  box2.style.width="300px"
+  box2.style.height="300px"
+  box2.style.backgroundColor="blue"
+  //3.设置csstext
+  box3.style.cssText='' +
+          'width:200px;height:200px;background:red;'
+</script>
+</body>
+</html>

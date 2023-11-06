@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box" id="root">我是root1</div>
+<div class="box" id="root2">我是root2</div>
+<script>
+  var elementById = document.getElementById("root");
+  var elementById2 = document.getElementById("root2");
+  console.log(elementById)
+  elementById.id="roots"
+  elementById.className="box2 box1"
+  elementById.classList.add("box3")
+  elementById.classList.add("box4")
+  elementById.classList.contains("box3")
+  elementById.classList.remove("box3")
+  console.log(elementById.innerHTML)
+  //可以把html元素识别
+  elementById.innerHTML="<a href='https://www.baidu.com'>百度</a>"
+  //不识别html元素
+  elementById2.innerText="<a href='https://www.baidu.com'></a>"
+</script>
+</body>
+</html>

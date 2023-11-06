@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //1.单引号和双引号都可以，js不区分string和char
+  var str1="hello 'lucy'"
+  var str2='hello "lucy"'
+  var str3='hello \`lucy\`'
+  var str4="hello \"lucy\""
+  console.log(str1)
+  console.log(str2)
+  console.log(str3)
+  console.log(str4)
+  var str5="我要换行" +
+          "了"
+  console.log(str5)
+  //2.字符串的长度
+  console.log("字符串长度:"+str5.length)
+  //3.字符串的CharAt，不区分中文和英文
+  console.log("字符串索引2的地方应该是'换':"+str5.charAt(2))
+  //4.如果索引越界，返回空字符串
+  console.log(str5.charAt(600)=="")
+  //5.字符串的concat
+  console.log("str1和str5合并:"+str1.concat(str5).concat(1).concat(false)+true)
+  //6.字符串的substring，参数1是开始索引，参数2是结束索引
+  console.log("substring1:"+str1.substring(0,1))
+  console.log("substring2:"+str1.substring(1))
+  //7.字符串的substr，参数1是开始索引，参数2是长度
+  console.log("substr:"+str1.substr(2,1))
+  //8.字符串的indexOf
+  console.log("indexOf:"+str1.indexOf("l"))
+  console.log("indexOf:"+str1.indexOf("l",4))
+  console.log("indexOf:"+str1.indexOf("m"))
+  //9.字符串的trim
+  var str6="    hello 'lucy'   "
+  console.log("term:"+str6.trim())
+  console.log("term:"+str6.trimStart())
+  console.log("term:"+str6.trimEnd())
+  //10.字符串的split
+  var str7="a,b,"
+  console.log("split:"+str7.split(",").length)
+  console.log(str7.split(","))
+  //如果给空字符串相当于获取里面每一个子字符串，类似java的toCharArray
+  console.log(str7.split(""))
+  console.log("split:"+str7.split(",")[0])
+  console.log("split:"+str7.split(",")[1])
+  console.log("split:"+(str7.split(",")[2]==""))
+
+</script>
+</body>
+</html>

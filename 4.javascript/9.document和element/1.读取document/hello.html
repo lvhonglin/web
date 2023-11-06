@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div> hello</div>
+<div class="myclass1"> hello</div>
+<form name="login"></form>
+<div id="root">hello</div>
+<script>
+  console.log(typeof document)
+  console.log(document)
+  if(document.nodeType===9){
+    console.log("顶层节点")
+  }
+  console.log("++++++++byTag+++++++")
+  //1.getElementsByTagName
+  elem1 = document.getElementsByTagName("div");
+  console.log(elem1)
+  elem1[0].innerHTML="hello world"
+  console.log("++++++++byClass+++++++")
+  //2.getEementsByClassName
+  elem2=document.getElementsByClassName("myclass1")
+  console.log(elem2)
+  elem2[0].innerHTML="hello keity"
+  console.log("++++++++byName+++++++")
+  //3.getEementsByName
+  elem3=document.getElementsByName("login")
+  console.log(elem3)
+  elem3[0].innerHTML="hello login"
+  //4.getEementsById
+  elem4=document.getElementById("root")
+  console.log(elem4)
+  elem4.innerHTML="hello root"
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  var arr1=[]
+  //0.数组里面可以放不同类型的数据
+  var arr2=["1",2,false]
+  console.log(arr2)
+  console.log(arr2.length)
+  console.log(arr2[1])
+  //如果获取的是非数组或者字符串的length，会返回undeinfed
+  console.log(arr2[1].length)
+  var v=1
+  console.log(v.length)
+  //1.如果索引越界的话返回的是undeinfed
+  console.log("数组越界："+arr2[3])
+  console.log("数组越界："+arr2[-1])
+  //2.数组嵌套数组
+  arr2[3]=["a","b","c"]
+  console.log(arr2)
+  console.log("++++数组的普通遍历++++")
+  //3.数组的遍历
+  for(var i=0;i<arr2.length;i++){
+    console.log(arr2[i]+",")
+  }
+  console.log("++++数组的for in遍历++++")
+  //index是索引
+  for(var index in arr2){
+    console.log(arr2[index])
+  }
+  console.log("++++判断当前是否是数组++++")
+  //4.判断对象是不是数组，因为typeof 数组的结果=object和真正
+  //的object无法区分，所以需要Array.isArray()
+  for(var i in arr2){
+    if(Array.isArray(arr2[i])){
+      for(var j in arr2[i]) {
+        console.log(arr2[i][j] + ',')
+      }
+    }else{
+      console.log(arr2[i]+',')
+    }
+  }
+  console.log("++++往数组添加数据++++")
+  //5.往数组添加数据
+  var arr3=[]
+  arr3[1]=123
+  console.log(arr3)
+  console.log(arr3[0]==undefined)
+  arr3[10]=22
+  console.log("length:"+arr3.length)
+  //末端添加新元素，并返回添加新元素后的数组长度
+  arr3.push("a","b")
+  console.log(arr3)
+  //删除并返回该元素
+  arr3.pop()
+  console.log(arr3)
+</script>
+
+</body>
+</html>

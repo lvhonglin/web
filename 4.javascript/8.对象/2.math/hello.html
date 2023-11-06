@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  var num1=-100
+  var num2=-200
+  var num3=-10
+  console.log(Math.abs(num1))
+  console.log(Math.max(num1,num2,num3))
+
+  console.log("++++++++取整数++++++++")
+  //floor是取比当前值小的最大整数
+  console.log(Math.floor(3.2))
+  console.log(Math.floor(-3.2))
+  //cell是取比当前值大的最小整数
+  console.log(Math.ceil(3.2))
+  console.log(Math.ceil(-3.2))
+  console.log("++++++++random++++++++")
+  //2.返回一个从0到1的数，可能等于0，但是不会等于1
+  function getRandom(min,max){
+    return Math.random()*(max-min)+min
+  }
+  console.log(Math.floor(getRandom(5,10)))
+  console.log(Math.floor(getRandom(5,10)))
+  console.log(Math.floor(getRandom(5,10)))
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //1.对象
+  var user={
+    name:"itbaizhan",
+    age: 13,
+    getName: function () {
+      return this.name
+    },
+    setName: function (name){
+      this.name=name
+    },
+    container:{
+      frondEnd: "web前端",
+      backEnd:["python","java"]
+    }
+  }
+  console.log(user.getName())
+  user.setName("lucy")
+  console.log(user.getName())
+  console.log(user.container.backEnd)
+</script>
+</body>
+</html>
