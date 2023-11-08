@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="username">
+<script>
+  var elementById = document.getElementById("username");
+  elementById.onkeydown=function (){
+    console.log("down")
+  }
+  elementById.onkeyup=function (e){
+    //打印input中的值
+    console.log(e.target.value)
+    //打印按键的id
+    console.log(e.keyCode)
+  }
+</script>
+</body>
+</html>

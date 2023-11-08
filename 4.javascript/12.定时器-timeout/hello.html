@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>理解定时器的基本使用</title>
+
+</head>
+<body>
+<script>
+  console.log("start1")
+  // 先打印start1再打印start2再打印延时打印
+  var timer=setTimeout(function (){
+    console.log("延时打印")
+  },3000)
+  //取消定时器
+  clearTimeout(timer)
+  console.log("start2")
+
+</script>
+</body>
+</html>

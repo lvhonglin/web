@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    #someDiv{
+      width: 100px;
+      height: 100px;
+      background: red;
+      /*opacity表示透明度，从0到1，0是透明*/
+      opacity: 2;
+    }
+  </style>
+</head>
+<body>
+<div id="someDiv"></div>
+<script>
+  var count=1
+  var div = document.getElementById("someDiv");
+  var interval = setInterval(function (){
+      if(count++%2==0){
+        div.style.opacity=1
+      }else{
+        div.style.opacity=0
+      }
+  },1000);
+  // 取消定时器
+  // clearInterval(interval)
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="username">
+<script>
+  var username = document.getElementById("username");
+  username.oninput=function (e){
+    console.log(e.target.value)
+  }
+  username.onselect=function (e){
+    console.log("选中了")
+  }
+  username.onchange=function (e){
+    console.log("改变了:"+e.target.value)
+  }
+</script>
+</body>
+</html>

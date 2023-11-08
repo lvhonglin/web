@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  var name="xiha"
+  var user={
+    name: "lucy",
+    //如果是如下格式是会打印lucy的
+    getName:function (){
+      console.log(this.name)
+    },
+    getNameTimeOut:function (){
+      //this永远指向调用者，这里会打印xiha
+      setTimeout(function (){
+        console.log(this.name)
+      },1000)
+    },
+    getNameTimeOut2:function (){
+      var that=this
+      //可以变通一下，这样会打印lucy
+      setTimeout(function (){
+        console.log(that.name)
+      },1000)
+    }
+  }
+  user.getName()
+  user.getNameTimeOut()
+  user.getNameTimeOut2()
+
+</script>
+</body>
+</html>

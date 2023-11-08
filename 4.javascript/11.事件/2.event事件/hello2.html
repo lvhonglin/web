@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .root{
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+<div class="root" id="root">
+  <div class="box" id="box"></div>
+</div>
+<script>
+  root=document.getElementsByClassName("root")[0]
+  root.onclick=function (){
+    console.log("root")
+  }
+  box=document.getElementById("box")
+  box.onclick=function (e){
+    //如果不加此配置，会打印box和root，加了之后只打印box，阻止事件冒泡
+    e.stopPropagation()
+    console.log("box")
+  }
+</script>
+</body>
+</html>

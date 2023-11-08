@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">按钮</button>
+<a href="http://www.baidu.com" id="baidu">百度</a>
+<script>
+    var btn = document.getElementById("btn");
+    btn.onclick=function (event){
+        console.log(event.target)
+        event.target.innerHTML="点击之后"
+        console.log(event.type)//点击的事件比如click
+        console.log(event.type=="click")
+    }
+    var elementById = document.getElementById("baidu");
+    elementById.onclick=function (e){
+        //阻止默认事件，比如点击a标签后的默认跳转，除了a标签有影响，表单也可以被组织提交
+        e.preventDefault()
+        console.log("组织了默认的跳转")
+    }
+</script>
+</body>
+</html>

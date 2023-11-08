@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="list">
+  <li class="class1">列表1</li>
+  <li class="class2">列表2</li>
+    <p>哈哈哈1</p>
+    <p>哈哈哈2</p>
+</ul>
+<script>
+  var list = document.getElementById("list");
+  list.addEventListener("click",function (e){
+      console.log(e.target.tagName)
+      console.log(e.target.className)
+      console.log(e.target.innerHTML)
+  })
+</script>
+</body>
+</html>
