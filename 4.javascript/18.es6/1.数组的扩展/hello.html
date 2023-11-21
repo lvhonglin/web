@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  var arr=[10,20,30,40]
+  for(let i=0;i<arr.length;i++){
+    console.log(i)
+  }
+  console.log(arr)
+  //1.es6的写法
+  console.log(...arr)
+  //2.es5中求数组最大值
+  console.log(Math.max.apply(null,arr))
+  //3.es6中求数组最大值
+  console.log(Math.max(...arr))
+  //4.数组的拼接
+  var arr1=[1,2,3]
+  var arr2=[4,5,6]
+  //es5的写法
+  console.log(arr1.concat(arr2))
+  //es6的写法
+  console.log([...arr1,...arr2])
+</script>
+</body>
+</html>

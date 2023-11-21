@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function timeout(ms){
+    const promise=new Promise((resolve)=>{
+      setTimeout(function (){
+        console.log("定时器")
+        //必须调用resolve，表示异步执行完了
+        resolve("成功了")
+      },ms)
+    })
+    return promise
+  }
+  async function asyncPrint(ms,value){
+    //把具有异步操作的代码前面放入await
+    prom=timeout(ms)
+    await prom
+    console.log(value)
+    prom.then(function (res){
+      console.log("resolve:"+res)
+    })
+  }
+  asyncPrint(2000,"hello")
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //2.es6的写法
+  class Person{
+    //一个类只能有一个构造方法
+    constructor(name,age,printName) {
+      this.name=name
+      this.age=age
+    }
+    static print(){
+        console.log("print")
+    }
+    getName(){
+      return this.name
+    }
+  }
+  var p=new Person("lucy",12)
+  console.log(p.getName())
+    Person.print()
+</script>
+</body>
+</html>
