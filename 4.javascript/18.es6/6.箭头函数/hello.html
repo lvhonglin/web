@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //1.声明函数第一种
+  function fn1(){
+
+  }
+  //声明函数第二种
+  var fn2=function (x,y){
+    return x+y
+  }
+  //声明函数第三种=》箭头函数
+  var fn3=(x,y)=>x+y
+  //如果逻辑比较复杂可以使用大括号给括起来
+  var fn4=(x,y)=>{
+    return x*y
+  };
+  var fn5=x=>x
+  //没用参数需要加括号
+  var fn6=()=>10
+  console.log(fn4(2,3))
+
+  //2.箭头函数的意义，不是为了替代普通函数，而是为了替代匿名函数
+  var arr=[10,20,30]
+  arr.map(function (element,index){
+      console.log(element+":"+index)
+  })
+  arr.map((x,y)=>console.log(x+":"+y))
+
+  //3.箭头函数的this
+  var name="ime"
+  var user={
+    name:"lucy",
+    age:20,
+    getName(){
+      console.log(this.name)
+    }
+  }
+  user.getName()
+  console.log("------------")
+  //es5的写法
+  var name="ime"
+  var user={
+    name:"lucy",
+    age:20,
+    getName(){
+      var my=this
+      setTimeout(function (){
+        console.log(my.name)
+      })
+    }
+  }
+  user.getName()
+  //es6的写法，因为匿名函数种没用this，如果用this
+  //默认调用的就是他上一层中的this
+  var name="ime"
+  var user={
+    name:"lucy",
+    age:20,
+    getName(){
+      setTimeout(()=>console.log(this.name))
+    }
+  }
+  user.getName()
+</script>
+</body>
+</html>

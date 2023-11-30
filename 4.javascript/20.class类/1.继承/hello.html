@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$Title$</title>
+</head>
+<body>
+<script>
+  class User{
+    constructor(name,age) {
+      this.name=name
+      this.age=age
+    }
+    printAge(){
+      console.log(this.age)
+    }
+    //静态变量只能被静态方法引用
+    static name2="111"
+    static printName(){
+      console.log(this.name2)
+    }
+  }
+  class Student extends User{
+    constructor(name,age,school) {
+      super(name,age)
+      this.school=school
+    }
+    printScheool(){
+      console.log(this.school)
+    }
+  }
+  var student=new Student("lucy",123,"44中")
+  student.printAge()
+  student.printScheool()
+  Student.printName()
+</script>
+</body>
+</html>

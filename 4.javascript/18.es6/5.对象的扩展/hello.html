@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //1.es5的属性值
+  var name ="lucy"
+  var user={
+    name:name,
+    age:18
+  }
+  console.log(user.name)
+
+  //2.es6的属性简略表示法
+  var city ="大连"
+  var user={
+    city,
+    age:18,
+    //es5的写法
+    getCity:function (){
+      console.log(this.city)
+    },
+    //es6的写法
+    getAge(){
+      console.log(this.age)
+    }
+  }
+  user.getCity()
+  user.getAge()
+
+  //3.返回多个结果
+  function getPoint(){
+    var x=10.2
+    var y=23.3
+    //es5的写法
+    return {
+      x:x,
+      y:y
+    }
+  }
+  console.log(getPoint().x)
+
+  function getPoint2(){
+    var x=10.2
+    var y=23.3
+    //es6的写法
+    return {x,y}
+  }
+  console.log(getPoint2().x)
+
+  //4.属性简略表示法，动态定义对象的属性
+  let propKey="lucy"
+  let obj={
+    [propKey]:true,
+    ['a'+'bc']:123
+  }
+  console.log(obj)
+  console.log(obj.lucy)
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  //1.set的基本用法
+  var set=new Set(["7","8"])
+  set.add("1")
+  set.add("1")
+  set.add("1")
+  var arr=["1","2","3"]
+  arr.forEach(x=>set.add(x))
+  console.log(set)
+  set.delete("3")
+  console.log(set)
+  set.add(...["4","5"])
+  console.log(set)
+  //2.使用set做数组去重
+  var arr=[1,2,1,1,1,2]
+  var s=new Set(arr)
+  var arr2=[...s]
+  console.log(arr2)
+  //3使用set去重重复字符，把字符串转换数组，放入set，
+  //再转回数组，再换回字符串
+  var a=[...new Set("abbc")].join('')
+  console.log(a)
+  //4.set的size
+  console.log(set.size)
+  //5.size的add、delete、has
+  console.log(set.has("7"))
+  //6.size的clear
+  set.clear()
+  console.log([...set])
+</script>
+</body>
+</html>

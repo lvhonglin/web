@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>标题1</h3>
+<h3>标题2</h3>
+<h3>标题3</h3>
+<script>
+  function  add(){
+    //这个arguments是个伪数组，只能用数组名[index]读取，不能用数组的方法
+    //比如不能用push、concat等
+    console.log(arguments)
+    console.log(arguments[0])
+    console.log(arguments[1])
+    console.log(arguments[2])
+  }
+  add(1,2,3)
+  //没法使用push
+  var titles = document.querySelectorAll("h3");
+  // 1.Array.from
+  console.log(titles[0])
+  var htmlHeadingElements = Array.from(titles);
+  htmlHeadingElements.push("标题4")
+  console.log(htmlHeadingElements[3])
+
+  var user={
+    "0":"lucy",
+    "1":20,
+    "2":"男",
+    length:3
+  }
+  console.log(user[0])
+
+  //2.Array.of
+  console.log(Array.of(1,2,"3"))
+  //3.Array 开辟一个包含3个容量的空间
+  console.log(Array(4))
+</script>
+</body>
+</html>

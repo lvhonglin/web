@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //如下问题是先打印hello，再打印定时器，但是
+    //我想要先打印定时器，再打印hello
+    function print(){
+        setTimeout(()=>{
+            console.log("定时器")
+        },2000)
+        console.log("hello")
+    }
+    print()
+</script>
+</body>
+</html>
