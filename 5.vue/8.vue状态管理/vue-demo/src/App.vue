@@ -1,5 +1,6 @@
 <template>
   <nav>
+    <h3>读取vuex的counter:{{$store.state.counter}}</h3>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/news">news</router-link>
